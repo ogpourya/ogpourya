@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ogpourya - Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Animated gradient orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+            pointer-events: none;
+        }
+        
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            bottom: -150px;
+            right: -150px;
+            animation-delay: -10s;
+        }
+        
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            top: 50%;
+            right: -100px;
+            animation-delay: -5s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        
+        /* Glass card effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Avatar glow */
+        .avatar-container {
+            position: relative;
+        }
+        
+        .avatar-glow {
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+            background-size: 300% 300%;
+            border-radius: 50%;
+            filter: blur(20px);
+            opacity: 0.6;
+            animation: gradient-rotate 8s ease infinite;
+            z-index: -1;
+        }
+        
+        @keyframes gradient-rotate {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* Link icon styling */
+        .link-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: brightness(0.9);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover .link-icon {
+            filter: brightness(1.2);
+            transform: scale(1.1);
+        }
+        
+        /* Smooth fade in */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            transform: translateY(20px);
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
+        .fade-in:nth-child(6) { animation-delay: 0.6s; }
+        
+        /*  Modal styles for Discord popup */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-content {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(30px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 32px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .copy-button {
+            background: rgba(88, 101, 242, 0.2);
+            border: 1px solid rgba(88, 101, 242, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .copy-button:hover {
+            background: rgba(88, 101, 242, 0.3);
+            border-color: rgba(88, 101, 242, 0.6);
+        }
+        
+        .copy-button.copied {
+            background: rgba(67, 181, 129, 0.2);
+            border-color: rgba(67, 181, 129, 0.6);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <!-- Animated background orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    
+    <!--  Discord modal -->
+    <div id="discord-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" alt="Discord" class="w-8 h-8">
+                    <h2 class="text-xl font-semibold text-white">Add me on Discord</h2>
+                </div>
+                <button onclick="closeDiscordModal()" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <p class="text-gray-300 text-sm mb-4">Send me a friend request on Discord:</p>
+            
+            <div class="bg-black/30 rounded-xl p-4 mb-4 border border-white/10">
+                <code class="text-white font-mono text-lg">@ogpourya</code>
+            </div>
+            
+            <button onclick="copyDiscordUsername()" id="copy-btn" class="copy-button w-full py-3 px-4 rounded-xl text-white font-medium flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span id="copy-text">Copy Username</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Main container -->
+    <div class="relative z-10 w-full max-w-md">
+        <!-- Profile section -->
+        <div class="text-center mb-8 fade-in">
+            <div class="avatar-container inline-block mb-4">
+                <div class="avatar-glow"></div>
+                <img 
+                    id="avatar" 
+                    class="w-24 h-24 rounded-full relative z-10 border-2 border-white/20"
+                    alt="Profile"
+                >
+            </div>
+            <h1 class="text-3xl font-semibold text-white mb-2">ogpourya</h1>
+            <p class="text-gray-400 text-sm font-light">Cybersecurity Enthusiast</p>
+        </div>
+        
+        <!-- Links container -->
+        <div id="links-container" class="space-y-3">
+            <!-- Links will be injected here -->
+        </div>
+        
+        <!-- Footer -->
+        <div class="text-center mt-8 fade-in">
+            <p class="text-gray-500 text-xs font-light">© 2025 ogpourya</p>
+        </div>
+    </div>
+
+    <script>
+        //  Updated links array with Discord action type
+        const links = [
+            {
+                name: 'Voorivex Academy',
+                url: 'https://voorivex.academy/profile/ogpourya',
+                domain: 'voorivex.academy',
+                type: 'link'
+            },
+            {
+                name: 'GitHub',
+                url: 'https://github.com/ogpourya',
+                domain: 'github.com',
+                type: 'link'
+            },
+            {
+                name: 'Discord',
+                domain: 'discord.com',
+                type: 'modal',
+                action: 'openDiscordModal'
+            },
+            {
+                name: 'Telegram',
+                url: 'https://t.me/ogpourya',
+                domain: 'telegram.org',
+                type: 'link'
+            }
+        ];
+
+        // Gravatar URL
+        const avatarUrl = 'https://1.gravatar.com/avatar/f64d2ca4c91853c03bfd2794e6b52dd18d1ba9b4bec84bb1a38702973b31a498?size=512&d=initials';
+
+        // Set avatar
+        document.getElementById('avatar').src = avatarUrl;
+
+        //  Discord modal functions
+        function openDiscordModal() {
+            document.getElementById('discord-modal').classList.add('active');
+        }
+
+        function closeDiscordModal() {
+            document.getElementById('discord-modal').classList.remove('active');
+        }
+
+        function copyDiscordUsername() {
+            navigator.clipboard.writeText('ogpourya').then(() => {
+                const btn = document.getElementById('copy-btn');
+                const text = document.getElementById('copy-text');
+                btn.classList.add('copied');
+                text.textContent = 'Copied!';
+                
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.textContent = 'Copy Username';
+                }, 2000);
+            });
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('discord-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'discord-modal') {
+                closeDiscordModal();
+            }
+        });
+
+        //  Updated link generation to handle modal type
+        const linksContainer = document.getElementById('links-container');
+        
+        links.forEach((link, index) => {
+            const linkElement = document.createElement(link.type === 'modal' ? 'button' : 'a');
+            
+            if (link.type === 'link') {
+                linkElement.href = link.url;
+                linkElement.target = '_blank';
+                linkElement.rel = 'noopener noreferrer';
+            } else if (link.type === 'modal') {
+                linkElement.onclick = window[link.action];
+            }
+            
+            linkElement.className = 'glass-card rounded-2xl p-4 flex items-center justify-between group cursor-pointer fade-in w-full';
+            linkElement.style.animationDelay = `${0.1 + (index * 0.1)}s`;
+            
+            const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${link.domain}`;
+            
+            linkElement.innerHTML = `
+                <div class="flex items-center gap-4">
+                    <img src="${faviconUrl}" alt="${link.name}" class="link-icon">
+                    <span class="text-white font-medium">${link.name}</span>
+                </div>
+                <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            `;
+            
+            linksContainer.appendChild(linkElement);
+        });
+    </script>
+</body>
+</html>
