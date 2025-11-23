@@ -1,322 +1,306 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>仌 POURYA</title>
     <meta name="description" content="Link tree for ogpourya">
-    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Phosphor Icons (for UI icons like copy/close) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-                    },
-                    colors: {
-                        ios: {
-                            bg: '#0f0f11',
-                            surface: '#1C1C1E',
-                            surfaceHighlight: '#2C2C2E',
-                            blue: '#0A84FF',
-                            separator: 'rgba(84, 84, 88, 0.65)',
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'slide-up': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'scale-in': 'scaleIn 0.2s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        scaleIn: {
-                            '0%': { opacity: '0', transform: 'scale(0.95)' },
-                            '100%': { opacity: '1', transform: 'scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+          theme: {
+              extend: {
+                  fontFamily: {
+                      sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                  },
+                  colors: {
+                      ios: {
+                          bg: '#0f0f11',
+                          surface: '#1C1C1E',
+                          surfaceHighlight: '#2C2C2E',
+                          blue: '#0A84FF',
+                          separator: 'rgba(84, 84, 88, 0.65)',
+                      }
+                  },
+                  animation: {
+                      'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                      'slide-up': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                      'scale-in': 'scaleIn 0.2s ease-out forwards',
+                  },
+                  keyframes: {
+                      fadeIn: {
+                          '0%': { opacity: '0' },
+                          '100%': { opacity: '1' },
+                      },
+                      slideUp: {
+                          '0%': { opacity: '0', transform: 'translateY(20px)' },
+                          '100%': { opacity: '1', transform: 'translateY(0)' },
+                      },
+                      scaleIn: {
+                          '0%': { opacity: '0', transform: 'scale(0.95)' },
+                          '100%': { opacity: '1', transform: 'scale(1)' },
+                      }
+                  }
+              }
+          }
+      }
     </script>
-
     <style>
-        /* iOS-like smooth scrolling and text rendering */
-        body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background-color: #0f0f11;
-            /* Subtle mesh gradient background */
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(56, 56, 60, 0.25) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(10, 132, 255, 0.12) 0px, transparent 50%);
-            background-attachment: fixed;
-        }
-
-        /* Remove tap highlight on mobile */
-        * {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f0f11; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #333; 
-            border-radius: 4px;
-        }
-
-        /* Glassmorphism Utilities */
-        .glass-panel {
-            background: rgba(28, 28, 30, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .modal-backdrop {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
+      /* iOS-like smooth scrolling and text rendering */
+      body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #0f0f11;
+      /* Subtle mesh gradient background */
+      background-image: 
+      radial-gradient(at 0% 0%, rgba(56, 56, 60, 0.25) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(10, 132, 255, 0.12) 0px, transparent 50%);
+      background-attachment: fixed;
+      }
+      /* Remove tap highlight on mobile */
+      * {
+      -webkit-tap-highlight-color: transparent;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+      width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+      background: #0f0f11; 
+      }
+      ::-webkit-scrollbar-thumb {
+      background: #333; 
+      border-radius: 4px;
+      }
+      /* Glassmorphism Utilities */
+      .glass-panel {
+      background: rgba(28, 28, 30, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .modal-backdrop {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      }
     </style>
-</head>
-<body class="text-white min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 relative overflow-x-hidden selection:bg-ios-blue selection:text-white">
-
+    <!-- Open Graph -->
+    <meta property="og:title" content="仌 POURYA">
+    <meta property="og:description" content="Link tree for ogpourya">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ogpourya.ir">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=600&d=mp">
+    <meta property="og:image:alt" content="仌 POURYA avatar">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="仌 POURYA">
+    <meta name="twitter:description" content="Link tree for ogpourya">
+    <meta name="twitter:image" content="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=600&d=mp">
+    <!-- Theme color for embeds -->
+    <meta name="theme-color" content="#0A84FF">
+  </head>
+  <body class="text-white min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 relative overflow-x-hidden selection:bg-ios-blue selection:text-white">
     <!-- Profile Section -->
     <main class="w-full max-w-[420px] mx-auto flex flex-col items-center z-10">
-        
-        <!-- Avatar -->
-        <div class="relative group mb-6 animate-fade-in opacity-0" style="animation-delay: 0.1s;">
-            <div class="absolute -inset-0.5 bg-gradient-to-tr from-white/20 to-white/0 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
-            <img 
-                id="avatar"
-                /* Uses MD5 hash of ogpourya@gmail.com */
-                src="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=400&d=mp" 
-                alt="Profile Avatar" 
-                class="relative w-28 h-28 rounded-full object-cover shadow-2xl border border-white/10 transition-transform duration-500 hover:scale-105"
-                onerror="this.src='https://ui-avatars.com/api/?name=Pourya&background=1C1C1E&color=fff'"
-            >
-        </div>
-
-        <!-- Name & Badge -->
-        <div class="text-center mb-10 animate-slide-up opacity-0" style="animation-delay: 0.2s;">
-            <h1 class="text-3xl font-bold tracking-tight flex items-center justify-center gap-2">
-                <span class="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">仌 POURYA</span>
-                <!-- Verified Badge (Optional flair) -->
-                <i class="ph-fill ph-seal-check text-ios-blue text-xl" title="Verified"></i>
-            </h1>
-        </div>
-
-        <!-- Links Container -->
-        <div class="w-full space-y-4 animate-slide-up opacity-0" style="animation-delay: 0.3s;">
-
-            <!-- Voorivex -->
-            <a href="https://voorivex.academy/profile/ogpourya" target="_blank" rel="noopener noreferrer" class="group block w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
-                <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
-                    <div class="flex items-center gap-4">
-                        <img src="https://www.google.com/s2/favicons?sz=64&domain=voorivex.academy" alt="Voorivex" class="w-8 h-8 rounded-lg shadow-sm">
-                        <span class="font-semibold text-base tracking-tight">Voorivex</span>
-                    </div>
-                    <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
-                </div>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/ogpourya" target="_blank" rel="noopener noreferrer" class="group block w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
-                <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
-                    <div class="flex items-center gap-4">
-                        <img src="https://www.google.com/s2/favicons?sz=64&domain=github.com" alt="GitHub" class="w-8 h-8 rounded-lg shadow-sm bg-white rounded-full"> <!-- Added white bg for github icon visibility -->
-                        <span class="font-semibold text-base tracking-tight">GitHub</span>
-                    </div>
-                    <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
-                </div>
-            </a>
-
-
-            <!-- Discord (Triggers Modal) -->
-            <button onclick="openModal()" class="group w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
-                <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
-                    <div class="flex items-center gap-4">
-                        <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" alt="Discord" class="w-8 h-8 rounded-lg shadow-sm">
-                        <span class="font-semibold text-base tracking-tight">Discord</span>
-                    </div>
-                    <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
-                </div>
-            </button>
-
-
-            <!-- Telegram -->
-            <a href="https://t.me/ogpourya" target="_blank" rel="noopener noreferrer" class="group block w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
-                <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
-                    <div class="flex items-center gap-4">
-                        <img src="https://www.google.com/s2/favicons?sz=64&domain=telegram.org" alt="Telegram" class="w-8 h-8 rounded-lg shadow-sm rounded-full">
-                        <span class="font-semibold text-base tracking-tight">Telegram</span>
-                    </div>
-                    <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
-                </div>
-            </a>
-
-
-        </div>
-
-        <!-- Footer -->
-        <footer class="mt-12 text-center opacity-0 animate-fade-in" style="animation-delay: 0.6s;">
-            <p class="text-xs text-gray-600 font-medium uppercase tracking-widest">ogpourya.ir</p>
-        </footer>
-
+      <!-- Avatar -->
+      <div class="relative group mb-6 animate-fade-in opacity-0" style="animation-delay: 0.1s;">
+        <div class="absolute -inset-0.5 bg-gradient-to-tr from-white/20 to-white/0 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
+        <img 
+        id="avatar"
+        /* Uses MD5 hash of ogpourya@gmail.com */
+        src="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=400&d=mp" 
+        alt="Profile Avatar" 
+        class="relative w-28 h-28 rounded-full object-cover shadow-2xl border border-white/10 transition-transform duration-500 hover:scale-105"
+        onerror="this.src='https://ui-avatars.com/api/?name=Pourya&background=1C1C1E&color=fff'"
+        >
+      </div>
+      <!-- Name & Badge -->
+      <div class="text-center mb-10 animate-slide-up opacity-0" style="animation-delay: 0.2s;">
+        <h1 class="text-3xl font-bold tracking-tight flex items-center justify-center gap-2">
+          <span class="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">仌 POURYA</span>
+          <!-- Verified Badge (Optional flair) -->
+          <i class="ph-fill ph-seal-check text-ios-blue text-xl" title="Verified"></i>
+        </h1>
+      </div>
+      <!-- Links Container -->
+      <div class="w-full space-y-4 animate-slide-up opacity-0" style="animation-delay: 0.3s;">
+        <!-- Voorivex -->
+        <a href="https://voorivex.academy/profile/ogpourya" target="_blank" rel="noopener noreferrer" class="group block w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
+          <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
+            <div class="flex items-center gap-4">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=voorivex.academy" alt="Voorivex" class="w-8 h-8 rounded-lg shadow-sm">
+              <span class="font-semibold text-base tracking-tight">Voorivex</span>
+            </div>
+            <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
+          </div>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/ogpourya" target="_blank" rel="noopener noreferrer" class="group block w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
+          <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
+            <div class="flex items-center gap-4">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=github.com" alt="GitHub" class="w-8 h-8 rounded-lg shadow-sm bg-white rounded-full"> <!-- Added white bg for github icon visibility -->
+              <span class="font-semibold text-base tracking-tight">GitHub</span>
+            </div>
+            <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
+          </div>
+        </a>
+        <!-- Discord (Triggers Modal) -->
+        <button onclick="openModal()" class="group w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
+          <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
+            <div class="flex items-center gap-4">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" alt="Discord" class="w-8 h-8 rounded-lg shadow-sm">
+              <span class="font-semibold text-base tracking-tight">Discord</span>
+            </div>
+            <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
+          </div>
+        </button>
+        <!-- Telegram -->
+        <a href="https://t.me/ogpourya" target="_blank" rel="noopener noreferrer" class="group block w-full relative overflow-hidden rounded-2xl p-[1px] focus:outline-none focus:ring-2 focus:ring-ios-blue/50 transition-transform active:scale-[0.98]">
+          <div class="glass-panel rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/5 transition-colors duration-300 relative z-10">
+            <div class="flex items-center gap-4">
+              <img src="https://www.google.com/s2/favicons?sz=64&domain=telegram.org" alt="Telegram" class="w-8 h-8 rounded-lg shadow-sm rounded-full">
+              <span class="font-semibold text-base tracking-tight">Telegram</span>
+            </div>
+            <i class="ph-bold ph-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
+          </div>
+        </a>
+      </div>
+      <!-- Footer -->
+      <footer class="mt-12 text-center opacity-0 animate-fade-in" style="animation-delay: 0.6s;">
+        <p class="text-xs text-gray-600 font-medium uppercase tracking-widest">ogpourya.ir</p>
+      </footer>
     </main>
-
     <!-- Modal Overlay -->
     <div id="discordModal" class="fixed inset-0 z-50 hidden items-center justify-center px-4" role="dialog" aria-modal="true">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 modal-backdrop transition-opacity duration-300 opacity-0" id="modalBackdrop" onclick="closeModal()"></div>
-        
-        <!-- Modal Content -->
-        <div class="relative w-full max-w-sm transform transition-all duration-300 scale-90 opacity-0 translate-y-4" id="modalPanel">
-            <div class="glass-panel rounded-3xl p-6 text-center shadow-2xl border border-white/10 bg-[#1c1c1e]/90">
-                
-                <!-- Icon -->
-                <div class="mx-auto w-16 h-16 bg-[#5865F2] rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-[#5865F2]/20">
-                    <i class="ph-fill ph-discord-logo text-3xl text-white"></i>
-                </div>
-
-                <h3 class="text-xl font-bold text-white mb-1">Add on Discord</h3>
-                <p class="text-gray-400 text-sm mb-6">Copy the username below to add me.</p>
-
-                <!-- Copy Area -->
-                <div class="bg-black/40 rounded-xl p-1.5 flex items-center justify-between pl-4 border border-white/5 mb-2">
-                    <span class="text-white font-mono select-all" id="discordId">ogpourya</span>
-                    <button onclick="copyToClipboard()" class="bg-[#2C2C2E] hover:bg-[#3a3a3c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors active:scale-95 flex items-center gap-2" id="copyBtn">
-                        <span id="copyText">Copy</span>
-                        <i class="ph-bold ph-copy" id="copyIcon"></i>
-                    </button>
-                </div>
-                
-                <div id="toastMessage" class="h-4 text-xs text-green-400 font-medium opacity-0 transition-opacity duration-200"></div>
-
-                <!-- Close Button -->
-                <button onclick="closeModal()" class="mt-4 text-gray-500 hover:text-white text-sm font-medium transition-colors py-2 px-4">
-                    Close
-                </button>
-            </div>
+      <!-- Backdrop -->
+      <div class="absolute inset-0 modal-backdrop transition-opacity duration-300 opacity-0" id="modalBackdrop" onclick="closeModal()"></div>
+      <!-- Modal Content -->
+      <div class="relative w-full max-w-sm transform transition-all duration-300 scale-90 opacity-0 translate-y-4" id="modalPanel">
+        <div class="glass-panel rounded-3xl p-6 text-center shadow-2xl border border-white/10 bg-[#1c1c1e]/90">
+          <!-- Icon -->
+          <div class="mx-auto w-16 h-16 bg-[#5865F2] rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-[#5865F2]/20">
+            <i class="ph-fill ph-discord-logo text-3xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Add on Discord</h3>
+          <p class="text-gray-400 text-sm mb-6">Copy the username below to add me.</p>
+          <!-- Copy Area -->
+          <div class="bg-black/40 rounded-xl p-1.5 flex items-center justify-between pl-4 border border-white/5 mb-2">
+            <span class="text-white font-mono select-all" id="discordId">ogpourya</span>
+            <button onclick="copyToClipboard()" class="bg-[#2C2C2E] hover:bg-[#3a3a3c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors active:scale-95 flex items-center gap-2" id="copyBtn">
+            <span id="copyText">Copy</span>
+            <i class="ph-bold ph-copy" id="copyIcon"></i>
+            </button>
+          </div>
+          <div id="toastMessage" class="h-4 text-xs text-green-400 font-medium opacity-0 transition-opacity duration-200"></div>
+          <!-- Close Button -->
+          <button onclick="closeModal()" class="mt-4 text-gray-500 hover:text-white text-sm font-medium transition-colors py-2 px-4">
+          Close
+          </button>
         </div>
+      </div>
     </div>
-
     <script>
-        // Modal Logic
-        const modal = document.getElementById('discordModal');
-        const modalBackdrop = document.getElementById('modalBackdrop');
-        const modalPanel = document.getElementById('modalPanel');
-        const discordId = document.getElementById('discordId').innerText;
-        
-        function openModal() {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            
-            // Small timeout to allow display:flex to apply before transition
-            setTimeout(() => {
-                modalBackdrop.classList.remove('opacity-0');
-                modalPanel.classList.remove('scale-90', 'opacity-0', 'translate-y-4');
-                modalPanel.classList.add('scale-100', 'opacity-100', 'translate-y-0');
-            }, 10);
-        }
-
-        function closeModal() {
-            modalBackdrop.classList.add('opacity-0');
-            modalPanel.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
-            modalPanel.classList.add('scale-90', 'opacity-0', 'translate-y-4');
-            
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                resetCopyButton();
-            }, 300);
-        }
-
-        // Copy Logic
-        function copyToClipboard() {
-            // Fallback for older browsers or non-secure contexts
-            if (!navigator.clipboard) {
-                const textArea = document.createElement("textarea");
-                textArea.value = discordId;
-                document.body.appendChild(textArea);
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    showCopiedState();
-                } catch (err) {
-                    console.error('Fallback: Oops, unable to copy', err);
-                }
-                document.body.removeChild(textArea);
-                return;
-            }
-
-            navigator.clipboard.writeText(discordId).then(function() {
-                showCopiedState();
-            }, function(err) {
-                console.error('Async: Could not copy text: ', err);
-            });
-        }
-
-        function showCopiedState() {
-            const btn = document.getElementById('copyBtn');
-            const text = document.getElementById('copyText');
-            const icon = document.getElementById('copyIcon');
-            const toast = document.getElementById('toastMessage');
-
-            // Change button style
-            btn.classList.remove('bg-[#2C2C2E]', 'hover:bg-[#3a3a3c]');
-            btn.classList.add('bg-green-600', 'hover:bg-green-700', 'text-white');
-            
-            text.innerText = "Copied";
-            icon.classList.replace('ph-copy', 'ph-check');
-            
-            // Show toast
-            toast.innerText = "Copied to clipboard!";
-            toast.classList.remove('opacity-0');
-
-            setTimeout(() => {
-               resetCopyButton();
-            }, 2000);
-        }
-
-        function resetCopyButton() {
-            const btn = document.getElementById('copyBtn');
-            const text = document.getElementById('copyText');
-            const icon = document.getElementById('copyIcon');
-            const toast = document.getElementById('toastMessage');
-
-            btn.classList.add('bg-[#2C2C2E]', 'hover:bg-[#3a3a3c]');
-            btn.classList.remove('bg-green-600', 'hover:bg-green-700');
-            
-            text.innerText = "Copy";
-            icon.classList.replace('ph-check', 'ph-copy');
-            toast.classList.add('opacity-0');
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
+      // Modal Logic
+      const modal = document.getElementById('discordModal');
+      const modalBackdrop = document.getElementById('modalBackdrop');
+      const modalPanel = document.getElementById('modalPanel');
+      const discordId = document.getElementById('discordId').innerText;
+      
+      function openModal() {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          
+          // Small timeout to allow display:flex to apply before transition
+          setTimeout(() => {
+              modalBackdrop.classList.remove('opacity-0');
+              modalPanel.classList.remove('scale-90', 'opacity-0', 'translate-y-4');
+              modalPanel.classList.add('scale-100', 'opacity-100', 'translate-y-0');
+          }, 10);
+      }
+      
+      function closeModal() {
+          modalBackdrop.classList.add('opacity-0');
+          modalPanel.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
+          modalPanel.classList.add('scale-90', 'opacity-0', 'translate-y-4');
+          
+          setTimeout(() => {
+              modal.classList.add('hidden');
+              modal.classList.remove('flex');
+              resetCopyButton();
+          }, 300);
+      }
+      
+      // Copy Logic
+      function copyToClipboard() {
+          // Fallback for older browsers or non-secure contexts
+          if (!navigator.clipboard) {
+              const textArea = document.createElement("textarea");
+              textArea.value = discordId;
+              document.body.appendChild(textArea);
+              textArea.select();
+              try {
+                  document.execCommand('copy');
+                  showCopiedState();
+              } catch (err) {
+                  console.error('Fallback: Oops, unable to copy', err);
+              }
+              document.body.removeChild(textArea);
+              return;
+          }
+      
+          navigator.clipboard.writeText(discordId).then(function() {
+              showCopiedState();
+          }, function(err) {
+              console.error('Async: Could not copy text: ', err);
+          });
+      }
+      
+      function showCopiedState() {
+          const btn = document.getElementById('copyBtn');
+          const text = document.getElementById('copyText');
+          const icon = document.getElementById('copyIcon');
+          const toast = document.getElementById('toastMessage');
+      
+          // Change button style
+          btn.classList.remove('bg-[#2C2C2E]', 'hover:bg-[#3a3a3c]');
+          btn.classList.add('bg-green-600', 'hover:bg-green-700', 'text-white');
+          
+          text.innerText = "Copied";
+          icon.classList.replace('ph-copy', 'ph-check');
+          
+          // Show toast
+          toast.innerText = "Copied to clipboard!";
+          toast.classList.remove('opacity-0');
+      
+          setTimeout(() => {
+             resetCopyButton();
+          }, 2000);
+      }
+      
+      function resetCopyButton() {
+          const btn = document.getElementById('copyBtn');
+          const text = document.getElementById('copyText');
+          const icon = document.getElementById('copyIcon');
+          const toast = document.getElementById('toastMessage');
+      
+          btn.classList.add('bg-[#2C2C2E]', 'hover:bg-[#3a3a3c]');
+          btn.classList.remove('bg-green-600', 'hover:bg-green-700');
+          
+          text.innerText = "Copy";
+          icon.classList.replace('ph-check', 'ph-copy');
+          toast.classList.add('opacity-0');
+      }
+      
+      // Close modal on Escape key
+      document.addEventListener('keydown', function(event) {
+          if (event.key === "Escape") {
+              closeModal();
+          }
+      });
     </script>
-</body>
+  </body>
 </html>
