@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>仌 POURYA</title>
-    <meta name="description" content="Link tree for ogpourya">
+    <title>仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر)</title>
+    <meta name="description" content="Link tree for 仌 POURYA, also known as ogpourya, Pourya Zaeemfar, پوریا زعیم فر, or Zaeemfar.">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Phosphor Icons (for UI icons like copy/close) -->
@@ -55,7 +55,7 @@
       -moz-osx-font-smoothing: grayscale;
       background-color: #0f0f11;
       /* Subtle mesh gradient background */
-      background-image: 
+      background-image:
       radial-gradient(at 0% 0%, rgba(56, 56, 60, 0.25) 0px, transparent 50%),
       radial-gradient(at 100% 100%, rgba(10, 132, 255, 0.12) 0px, transparent 50%);
       background-attachment: fixed;
@@ -69,10 +69,10 @@
       width: 8px;
       }
       ::-webkit-scrollbar-track {
-      background: #0f0f11; 
+      background: #0f0f11;
       }
       ::-webkit-scrollbar-thumb {
-      background: #333; 
+      background: #333;
       border-radius: 4px;
       }
       /* Glassmorphism Utilities */
@@ -89,16 +89,16 @@
       }
     </style>
     <!-- Open Graph -->
-    <meta property="og:title" content="仌 POURYA">
-    <meta property="og:description" content="Link tree for ogpourya">
+    <meta property="og:title" content="仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر)">
+    <meta property="og:description" content="Link tree for 仌 POURYA, also known as ogpourya, Pourya Zaeemfar, پوریا زعیم فر, or Zaeemfar.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ogpourya.ir">
     <meta property="og:image" content="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=600&d=mp">
-    <meta property="og:image:alt" content="仌 POURYA avatar">
+    <meta property="og:image:alt" content="仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر) avatar">
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="仌 POURYA">
-    <meta name="twitter:description" content="Link tree for ogpourya">
+    <meta name="twitter:title" content="仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر)">
+    <meta name="twitter:description" content="Link tree for 仌 POURYA, also known as ogpourya, Pourya Zaeemfar, پوریا زعیم فر, or Zaeemfar.">
     <meta name="twitter:image" content="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=600&d=mp">
     <!-- Theme color for embeds -->
     <meta name="theme-color" content="#0A84FF">
@@ -109,11 +109,11 @@
       <!-- Avatar -->
       <div class="relative group mb-6 animate-fade-in opacity-0" style="animation-delay: 0.1s;">
         <div class="absolute -inset-0.5 bg-gradient-to-tr from-white/20 to-white/0 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
-        <img 
+        <img
         id="avatar"
         /* Uses MD5 hash of ogpourya@gmail.com */
-        src="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=400&d=mp" 
-        alt="Profile Avatar" 
+        src="https://www.gravatar.com/avatar/515d0d8923d05f6c3ccdb9a9f9285a4b?s=400&d=mp"
+        alt="仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر) Profile Avatar"
         class="relative w-28 h-28 rounded-full object-cover shadow-2xl border border-white/10 transition-transform duration-500 hover:scale-105"
         onerror="this.src='https://ui-avatars.com/api/?name=Pourya&background=1C1C1E&color=fff'"
         >
@@ -209,11 +209,11 @@
       const modalBackdrop = document.getElementById('modalBackdrop');
       const modalPanel = document.getElementById('modalPanel');
       const discordId = document.getElementById('discordId').innerText;
-      
+     
       function openModal() {
           modal.classList.remove('hidden');
           modal.classList.add('flex');
-          
+         
           // Small timeout to allow display:flex to apply before transition
           setTimeout(() => {
               modalBackdrop.classList.remove('opacity-0');
@@ -221,19 +221,19 @@
               modalPanel.classList.add('scale-100', 'opacity-100', 'translate-y-0');
           }, 10);
       }
-      
+     
       function closeModal() {
           modalBackdrop.classList.add('opacity-0');
           modalPanel.classList.remove('scale-100', 'opacity-100', 'translate-y-0');
           modalPanel.classList.add('scale-90', 'opacity-0', 'translate-y-4');
-          
+         
           setTimeout(() => {
               modal.classList.add('hidden');
               modal.classList.remove('flex');
               resetCopyButton();
           }, 300);
       }
-      
+     
       // Copy Logic
       function copyToClipboard() {
           // Fallback for older browsers or non-secure contexts
@@ -251,50 +251,50 @@
               document.body.removeChild(textArea);
               return;
           }
-      
+     
           navigator.clipboard.writeText(discordId).then(function() {
               showCopiedState();
           }, function(err) {
               console.error('Async: Could not copy text: ', err);
           });
       }
-      
+     
       function showCopiedState() {
           const btn = document.getElementById('copyBtn');
           const text = document.getElementById('copyText');
           const icon = document.getElementById('copyIcon');
           const toast = document.getElementById('toastMessage');
-      
+     
           // Change button style
           btn.classList.remove('bg-[#2C2C2E]', 'hover:bg-[#3a3a3c]');
           btn.classList.add('bg-green-600', 'hover:bg-green-700', 'text-white');
-          
+         
           text.innerText = "Copied";
           icon.classList.replace('ph-copy', 'ph-check');
-          
+         
           // Show toast
           toast.innerText = "Copied to clipboard!";
           toast.classList.remove('opacity-0');
-      
+     
           setTimeout(() => {
              resetCopyButton();
           }, 2000);
       }
-      
+     
       function resetCopyButton() {
           const btn = document.getElementById('copyBtn');
           const text = document.getElementById('copyText');
           const icon = document.getElementById('copyIcon');
           const toast = document.getElementById('toastMessage');
-      
+     
           btn.classList.add('bg-[#2C2C2E]', 'hover:bg-[#3a3a3c]');
           btn.classList.remove('bg-green-600', 'hover:bg-green-700');
-          
+         
           text.innerText = "Copy";
           icon.classList.replace('ph-check', 'ph-copy');
           toast.classList.add('opacity-0');
       }
-      
+     
       // Close modal on Escape key
       document.addEventListener('keydown', function(event) {
           if (event.key === "Escape") {
