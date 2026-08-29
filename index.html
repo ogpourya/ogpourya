@@ -2,279 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ogpourya.ir</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="description" content="Computer geek, gym rat, music lover. Young guy from Urmia with an unpredictable streak.">
+  <meta name="description" content="Tech bro, gym rat, music lover.">
   <meta property="og:title" content="仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر)">
-  <meta property="og:description" content="Computer geek, gym rat, music lover. Young guy from Urmia with an unpredictable streak.">
+  <meta property="og:description" content="Tech bro, gym rat, music lover.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ogpourya.ir">
   <meta property="og:image" content="assets/img/avatar-600.jpg">
+  <meta name="theme-color" content="#0f1014">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="仌 POURYA - Pourya Zaeemfar (پوریا زعیم فر)">
-  <meta name="twitter:description" content="Computer geek, gym rat, music lover. Young guy from Urmia with an unpredictable streak.">
+  <meta name="twitter:description" content="Tech bro, gym rat, music lover.">
   <meta name="twitter:image" content="assets/img/avatar-600.jpg">
   <style>
-    @font-face {
-      font-family: 'Ubuntu Mono';
-      src: url('assets/fonts/UbuntuMono-Regular.ttf') format('truetype');
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --ink: #f5f5f7;
+      --ink-2: #98989d;
+      --ink-3: #6b6b70;
+      --line: rgba(255,255,255,0.09);
+      --accent: #5e9eff;
+    }
     body {
       min-height: 100vh;
-      background: #0d1117;
+      min-height: 100dvh;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 24px;
-      font-family: 'Ubuntu Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-      font-size: 28px;
-      color: #e6edf3;
+      padding: 13vh 24px 48px;
+      background:
+        radial-gradient(55vw 45vh at 10% -8%, rgba(94,106,255,0.16), transparent 62%),
+        radial-gradient(50vw 40vh at 95% 4%, rgba(0,113,227,0.13), transparent 60%),
+        radial-gradient(45vw 42vh at 55% 112%, rgba(16,185,129,0.10), transparent 60%),
+        radial-gradient(38vw 36vh at -5% 85%, rgba(217,70,239,0.08), transparent 60%),
+        #0f1014;
+      background-attachment: fixed;
     }
-    .neofetch {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      max-width: 740px;
-      width: 100%;
-    }
-    .ascii {
-      flex-shrink: 0;
-      text-align: center;
-    }
-    .ascii-art-frame {
-      display: inline-block;
-      padding: 4px;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      line-height: 0;
-    }
-    .ascii-art-frame img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      image-rendering: pixelated;
-      border-radius: 4px;
-      display: block;
-    }
-    .info { flex: 1; min-width: 0; }
-    .info-line {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      padding: 5px 0;
-      font-size: 24px;
-      line-height: 1.7;
-      border-bottom: 1px solid rgba(255,255,255,0.03);
-    }
-    .info-line:last-child { border-bottom: none; }
-    .info-line .key {
-      color: #58a6ff;
-      font-weight: 700;
-      white-space: nowrap;
-      min-width: 90px;
-    }
-    .info-line .key::after { content: ':'; color: #8b949e; margin-left: 2px; }
-    .info-line .val { color: #e6edf3; }
-    .info-line .val.muted { color: #8b949e; }
-    .info-line .val a {
-      color: #58a6ff;
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-    .info-line .val a:hover { color: #79c0ff; text-decoration: underline; }
-    .info-line .val .tag {
-      display: inline-block;
-      padding: 0 16px;
-      height: 38px;
-      line-height: 38px;
+    main { width: 100%; max-width: 480px; animation: rise 0.8s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+
+    .avatar {
+      width: 68px; height: 68px;
       border-radius: 20px;
-      font-size: 20px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 26px;
+      padding: 2px;
+      background: linear-gradient(135deg, #5e6aff, #0071e3 45%, #10b981);
+      box-shadow: 0 8px 28px -6px rgba(94,106,255,0.45);
+    }
+    h1 {
+      font-size: 34px;
       font-weight: 700;
-      color: #0d1117;
-      background: #58a6ff;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      background: linear-gradient(90deg, #7c8bff, #4da3ff 55%, #34d399);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    .info-line .val .tag.discord { background: #5865f2; }
-    .section-title {
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #8b949e;
-      margin-top: 12px;
-      margin-bottom: 4px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 12px;
+    .sub {
+      margin-top: 8px;
+      font-size: 15px;
+      color: var(--ink-2);
+      letter-spacing: -0.01em;
     }
-    @media (max-width: 620px) {
-      .neofetch { flex-direction: column; gap: 16px; align-items: center; }
-      .ascii-art-frame img { width: 120px; height: 120px; }
-      .info { width: 100%; }
-      .info-line { font-size: 20px; }
+    .bio {
+      margin-top: 18px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #c7c7cc;
+      letter-spacing: -0.01em;
+    }
+
+    .links {
+      margin-top: 38px;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+    .links li { border-bottom: 1px solid var(--line); }
+    .row {
+      --c: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 16px 2px;
+      background: none;
+      border: none;
+      font: inherit;
+      color: var(--ink);
+      text-decoration: none;
+      cursor: pointer;
+      text-align: left;
+      letter-spacing: -0.01em;
+      transition: color 0.2s, padding 0.25s cubic-bezier(0.22,1,0.36,1);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .row:hover, .row:focus-visible {
+      color: var(--c);
+      outline: none;
+      padding-left: 8px;
+    }
+    .dot {
+      flex-shrink: 0;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--c);
+      box-shadow: 0 0 10px var(--c);
+      opacity: 0.85;
+      transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
+    }
+    .row:hover .dot { transform: scale(1.35); }
+    .row .label { font-size: 16px; font-weight: 500; flex: 1; }
+    .row .right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--ink-3);
+      transition: color 0.2s;
+    }
+    .row:hover .right { color: var(--c); }
+    .row .arrow { transition: transform 0.2s ease; font-size: 13px; }
+    .row:hover .arrow { transform: translate(2px, -2px); }
+    .voorivex  { --c: #a78bfa; }
+    .github    { --c: #e8eaed; }
+    .github .dot { box-shadow: 0 0 10px rgba(232,234,237,0.5); }
+    .telegram  { --c: #37bbfe; }
+    .discord   { --c: #7d8cff; }
+    #copyState { font-variant-numeric: tabular-nums; }
+
+    footer {
+      margin-top: 42px;
+      font-size: 13px;
+      color: #565659;
+      letter-spacing: -0.01em;
+    }
+
+    @media (max-width: 480px) {
+      body { padding-top: 8vh; }
+      h1 { font-size: 29px; }
+      .row { padding: 14px 2px; }
+      .row:hover { padding-left: 6px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      main { animation: none; }
+      .row, .dot, .arrow { transition: none; }
     }
   </style>
 </head>
 <body>
-  <div class="neofetch">
-    <div class="ascii">
-      <div class="ascii-art-frame">
-        <img src="assets/img/avatar-400.jpg" alt="仌 POURYA">
-      </div>
-    </div>
-    <div class="info">
-      <div class="info-line">
-        <span class="key">OS</span>
-        <span class="val"><span class="tag">仌 POURYA</span></span>
-      </div>
-      <div class="info-line">
-        <span class="key">Name</span>
-        <span class="val">Pourya Zaeemfar</span>
-      </div>
-      <div class="info-line">
-        <span class="key">Locale</span>
-        <span class="val">Urmia, Iran</span>
-      </div>
-      <div class="info-line">
-        <span class="key">Bio</span>
-        <span class="val muted">Computer geek, gym rat, music lover. Young guy from Urmia with an unpredictable streak.</span>
-      </div>
+  <main>
+    <img class="avatar" src="assets/img/avatar-400.jpg" alt="Portrait of Pourya Zaeemfar">
+    <h1>仌 POURYA</h1>
+    <p class="sub">Pourya Zaeemfar (پوریا زعیم فر) · Urmia, Iran</p>
+    <p class="bio">Tech bro, gym rat, music lover.</p>
 
-      <div class="section-title">Links</div>
+    <ul class="links">
+      <li>
+        <a class="row voorivex" href="https://voorivex.academy/profile/ogpourya" target="_blank" rel="noopener noreferrer">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="label">Voorivex</span>
+          <span class="right">voorivex.academy <span class="arrow">&#8599;</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="row github" href="https://github.com/ogpourya" target="_blank" rel="noopener noreferrer">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="label">GitHub</span>
+          <span class="right">ogpourya <span class="arrow">&#8599;</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="row telegram" href="https://t.me/ogpourya" target="_blank" rel="noopener noreferrer">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="label">Telegram</span>
+          <span class="right">@ogpourya <span class="arrow">&#8599;</span></span>
+        </a>
+      </li>
+      <li>
+        <button class="row discord" type="button" onclick="copyDiscord()" aria-label="Copy Discord username ogpourya">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="label">Discord</span>
+          <span class="right"><span id="copyState">ogpourya · tap to copy</span></span>
+        </button>
+      </li>
+    </ul>
 
-      <div class="info-line">
-        <span class="key">Voorivex</span>
-        <span class="val"><a href="https://voorivex.academy/profile/ogpourya" target="_blank" rel="noopener noreferrer">voorivex.academy &#8599;</a></span>
-      </div>
-      <div class="info-line">
-        <span class="key">GitHub</span>
-        <span class="val"><a href="https://github.com/ogpourya" target="_blank" rel="noopener noreferrer">github.com/ogpourya &#8599;</a></span>
-      </div>
-      <div class="info-line">
-        <span class="key">Telegram</span>
-        <span class="val"><a href="https://t.me/ogpourya" target="_blank" rel="noopener noreferrer">@ogpourya &#8599;</a></span>
-      </div>
-      <div class="info-line">
-        <span class="key">Discord</span>
-        <span class="val"><span class="tag discord" onclick="openModal()" style="cursor:pointer;">ogpourya</span></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="discordModal">
-    <div class="modal-card">
-      <div class="d-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-      <h3>Add on Discord</h3>
-      <p>Copy the username below to add me.</p>
-      <div class="copy-row">
-        <span id="discordId">ogpourya</span>
-        <button id="copyBtn" onclick="copyToClipboard()"><span id="copyText">Copy</span></button>
-      </div>
-      <div class="toast-msg" id="toastMessage"></div>
-      <div class="modal-actions">
-        <button onclick="closeModal()">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(6px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal-card {
-      width: 360px;
-      max-width: 100%;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 24px;
-      text-align: center;
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    }
-    .modal-card .d-icon {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: #5865f2;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 12px;
-      color: #fff;
-    }
-    .modal-card h3 { font-size: 15px; color: #e6edf3; margin-bottom: 4px; }
-    .modal-card p {       font-size: 16px; color: #8b949e; margin-bottom: 14px; }
-    .copy-row {
-      display: flex; align-items: center;
-      background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .copy-row span { flex: 1; padding: 8px 12px; font-size: 13px; color: #e6edf3; user-select: all; text-align: left; }
-    .copy-row button {
-      background: #21262d;
-      border: none;
-      border-left: 1px solid #30363d;
-      padding: 8px 16px;
-      font-family: inherit;
-      font-size: 12px;
-      cursor: pointer;
-      color: #c9d1d9;
-      transition: background 0.15s;
-    }
-    .copy-row button:hover { background: #30363d; }
-    .copy-row button.green { background: #238636; color: #fff; }
-    .toast-msg { height: 16px; font-size: 11px; color: #3fb950; opacity: 0; transition: opacity 0.2s; margin-top: 6px; }
-    .modal-actions { margin-top: 12px; }
-    .modal-actions button {
-      background: #21262d;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 6px 24px;
-      font-family: inherit;
-      font-size: 12px;
-      cursor: pointer;
-      color: #c9d1d9;
-    }
-    .modal-actions button:hover { background: #30363d; }
-  </style>
+    <footer>&copy; 2026</footer>
+  </main>
 
   <script>
-    const modal = document.getElementById('discordModal');
-    const discordId = document.getElementById('discordId').innerText;
-    function openModal() { modal.classList.add('open'); }
-    function closeModal() { modal.classList.remove('open'); resetCopyBtn(); }
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
-    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
-    function copyToClipboard() {
-      if (!navigator.clipboard) {
+    function copyDiscord() {
+      const state = document.getElementById('copyState');
+      const done = () => {
+        state.textContent = 'Copied \u2713';
+        setTimeout(() => state.textContent = 'ogpourya \u00B7 tap to copy', 1600);
+      };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText('ogpourya').then(done, function(){});
+      } else {
         const ta = document.createElement('textarea');
-        ta.value = discordId; document.body.appendChild(ta);
-        ta.select(); try { document.execCommand('copy'); showCopied(); } catch(e) {}
-        document.body.removeChild(ta); return;
+        ta.value = 'ogpourya'; document.body.appendChild(ta);
+        ta.select();
+        try { if (document.execCommand('copy')) done(); } catch(e) {}
+        document.body.removeChild(ta);
       }
-      navigator.clipboard.writeText(discordId).then(showCopied, function(){});
-    }
-    function showCopied() {
-      const btn = document.getElementById('copyBtn');
-      const text = document.getElementById('copyText');
-      const toast = document.getElementById('toastMessage');
-      btn.classList.add('green'); text.innerText = 'Copied!';
-      toast.textContent = 'Copied to clipboard!'; toast.style.opacity = '1';
-      setTimeout(resetCopyBtn, 2000);
-    }
-    function resetCopyBtn() {
-      const btn = document.getElementById('copyBtn');
-      const text = document.getElementById('copyText');
-      const toast = document.getElementById('toastMessage');
-      btn.classList.remove('green'); text.innerText = 'Copy'; toast.style.opacity = '0';
     }
   </script>
 </body>
