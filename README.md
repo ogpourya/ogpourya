@@ -22,7 +22,7 @@ Tech bro, highly interested in software, obsessed with security and performance.
 - ⚙️ Automation systems
 - 🤖 AI agents
 - 💬 English
-- 🏋️ Gym, every day
+- 🏋️ Gym
 
 ## `$ stats`
 
