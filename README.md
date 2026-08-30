@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/ogpourya.png" width="92" height="92" alt="ogpourya" style="border-radius: 20px;">
-</p>
-
 <h1 align="center">仌 POURYA</h1>
 
 <p align="center"><b>Pourya Zaeemfar</b> (پوریا زعیم فر) · Urmia, Iran</p>
