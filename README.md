@@ -26,7 +26,3 @@ Tech bro, highly interested in software, obsessed with security and performance.
   <img src="https://streak-stats.demolab.com/?user=ogpourya&theme=tokyonight&hide_border=true&background=0f1014" alt="GitHub streak">
   <img src="https://gh-readme-stats-mu.vercel.app/api/top-langs/?username=ogpourya&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="top languages">
 </p>
-
----
-
-<p align="center"><samp>powered by coffee, loud music, and a terminal that never closes</samp></p>
