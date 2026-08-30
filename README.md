@@ -29,7 +29,6 @@ Gen Z cybersecurity enthusiast. I break systems to understand how they tick — 
 ## `$ stats`
 
 <p align="center">
-  <img src="https://gh-readme-stats-mu.vercel.app/api?username=ogpourya&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="GitHub stats">
   <img src="https://streak-stats.demolab.com/?user=ogpourya&theme=tokyonight&hide_border=true&background=0f1014" alt="GitHub streak">
   <img src="https://gh-readme-stats-mu.vercel.app/api/top-langs/?username=ogpourya&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="top languages">
 </p>
