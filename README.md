@@ -7,7 +7,6 @@
 <p align="center"><b>Pourya Zaeemfar</b> (پوریا زعیم فر) · Urmia, Iran</p>
 
 <p align="center">
-  <a href="https://ogpourya.ir"><img src="https://img.shields.io/badge/website-ogpourya.ir-5e9eff?style=for-the-badge&logo=safari&logoColor=white&labelColor=%230f1014" alt="website"></a>
   <a href="https://t.me/ogpourya"><img src="https://img.shields.io/badge/telegram-%40ogpourya-37bbfe?style=for-the-badge&logo=telegram&logoColor=white&labelColor=%230f1014" alt="telegram"></a>
   <a href="https://voorivex.academy/profile/ogpourya"><img src="https://img.shields.io/badge/voorivex-ogpourya-a78bfa?style=for-the-badge&labelColor=%230f1014" alt="voorivex"></a>
 </p>
