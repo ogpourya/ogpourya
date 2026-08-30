@@ -17,14 +17,14 @@
 
 ## `$ whoami`
 
-Gen Z cybersecurity enthusiast. I break systems to understand how they tick — then I harden them.
+Tech bro, highly interested in software — obsessed with security and performance.
 
-- 🛡️ **Hacking & security** — CTFs, exploitation, vulnerability research, and defense
-- 🖥️ **Server management & networking** — deploys, hardening, and making machines talk to each other
-- ⚙️ **Automation systems** — if I've done it twice, it's a script now
-- 🤖 **AI agents** — building and steering AI agents to do real work, not just demos
-- 💬 **English** — fluent and comfortable working in English-first teams
-- 🏋️ **Gym, every day** — consistency is a transferable skill
+- 🛡️ Hacking & security
+- 🖥️ Server management & networking
+- ⚙️ Automation systems
+- 🤖 AI agents
+- 💬 English
+- 🏋️ Gym, every day
 
 ## `$ stats`
 
