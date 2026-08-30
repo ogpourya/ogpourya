@@ -16,6 +16,7 @@ Tech bro, highly interested in software, obsessed with security and performance.
 - 🛡️ Hacking & security
 - 🖥️ Server management & networking
 - ⚙️ Automation systems
+- 💻 Software development
 - 🤖 AI agents
 - 💬 English
 - 🏋️ Gym
