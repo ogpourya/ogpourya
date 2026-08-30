@@ -5,7 +5,6 @@
 <h1 align="center">仌 POURYA</h1>
 
 <p align="center"><b>Pourya Zaeemfar</b> (پوریا زعیم فر) · Urmia, Iran</p>
-<p align="center"><samp>tech bro · gym rat · music lover</samp></p>
 
 <p align="center">
   <a href="https://ogpourya.ir"><img src="https://img.shields.io/badge/website-ogpourya.ir-5e9eff?style=for-the-badge&logo=safari&logoColor=white&labelColor=%230f1014" alt="website"></a>
@@ -17,7 +16,7 @@
 
 ## `$ whoami`
 
-Tech bro, highly interested in software — obsessed with security and performance.
+Tech bro, highly interested in software, obsessed with security and performance.
 
 - 🛡️ Hacking & security
 - 🖥️ Server management & networking
