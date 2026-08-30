@@ -32,23 +32,12 @@ Gen Z cybersecurity enthusiast. I break systems to understand how they tick — 
 - Music on at all times — it powers everything above
 - Always accepting a new CTF, bug hunt, or over-engineered homelab idea
 
-## `$ stack`
-
-<p align="center">
-  <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black&labelColor=%230f1014" alt="Linux">
-  <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=%230f1014" alt="Docker">
-  <img src="https://img.shields.io/badge/nginx-009639?style=for-the-badge&logo=nginx&logoColor=white&labelColor=%230f1014" alt="Nginx">
-  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=%230f1014" alt="Git">
-  <img src="https://img.shields.io/badge/ci%2Fcd-2088FF?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=%230f1014" alt="CI/CD">
-  <img src="https://img.shields.io/badge/bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=%230f1014" alt="Bash">
-</p>
-
 ## `$ stats`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ogpourya&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="GitHub stats">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ogpourya&theme=tokyonight&hide_border=true&background=0f1014" alt="GitHub streak">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ogpourya&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="top languages">
+  <img src="https://gh-readme-stats-mu.vercel.app/api?username=ogpourya&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="GitHub stats">
+  <img src="https://streak-stats.demolab.com/?user=ogpourya&theme=tokyonight&hide_border=true&background=0f1014" alt="GitHub streak">
+  <img src="https://gh-readme-stats-mu.vercel.app/api/top-langs/?username=ogpourya&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f1014" alt="top languages">
 </p>
 
 ---
