@@ -26,12 +26,6 @@ Gen Z cybersecurity enthusiast. I break systems to understand how they tick — 
 - 💬 **English** — fluent and comfortable working in English-first teams
 - 🏋️ **Gym, every day** — consistency is a transferable skill
 
-## `$ uptime`
-
-- Currently leveling up in security research and AI-assisted workflows
-- Music on at all times — it powers everything above
-- Always accepting a new CTF, bug hunt, or over-engineered homelab idea
-
 ## `$ stats`
 
 <p align="center">
